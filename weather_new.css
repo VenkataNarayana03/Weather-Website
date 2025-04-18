@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f9fc; /* New background color */
+    color: #333;
+    transition: background-color 0.5s; /* Smooth transition for background color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #52c5ff; /* New header background color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+main {
+    padding: 20px;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make main section full width */
+}
+
+.weather-info {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 40px; /* Increased padding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a more pronounced effect */
+    width: 100%;
+    height: 100%;
+    max-width: 1000px; /* Optional: max width to limit content stretching */
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto; /* Center the section */
+}
+
+.weather-details {
+    font-size: 20px; /* Slightly increased font size */
+    margin-top: 20px; /* Add some space above the details */
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px; /* Increased padding */
+    background-color: #52c5ff; /* New footer background color */
+    color: white;
+    flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.search-box,
+.current-weather {
+    width: 100%; /* Adjust as needed */
+    text-align: center;
+    margin-bottom: 20px; /* Space between search box and weather content */
+}
+
+input[type="text"] {
+    padding: 12px; /* Increased padding for inputs */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 80%; /* Set a width for better layout */
+    max-width: 400px; /* Maximum width for input field */
+}
+
+button {
+    padding: 12px 24px; /* Increased padding for buttons */
+    border: none;
+    border-radius: 4px;
+    background-color: #52c5ff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+button:hover {
+    background-color: #435b73;
+    transform: scale(1.05); /* Scale button on hover */
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-around; /* Evenly space the forecast elements */
+    margin-top: 20px; /* Add space above the forecast */
+}
+
+.forecast-day {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 30%; /* Adjust width for three items */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+}
+
+.forecast-day:hover {
+    transform: translateY(-10px); /* Lift the card slightly */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.forecast-day h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.forecast-day p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .weather-info {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    input[type="text"],
+    button {
+        width: 100%;
+        margin-bottom: 10px; /* Stack inputs and buttons */
+    }
+
+    .weather-details {
+        font-size: 18px; /* Adjust font size on smaller screens */
+    }
+
+    .forecast-container {
+        flex-direction: column; /* Stack forecast days vertically on small screens */
+        align-items: center;
+    }
+
+    .forecast-day {
+        width: 80%; /* Adjust width for vertical layout */
+        margin-bottom: 20px;
+    }
+}

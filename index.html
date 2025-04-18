@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="weather_new.css">
+</head>
+<body>
+    <header>
+        <h1>Weather Forecast</h1>
+    </header>
+    <main>
+        <section class="weather-info">
+            <h2>Current Weather</h2>
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-button">Search</button>
+            <button id="clear-button">Clear</button>
+            <div class="weather-details">
+                <p>Location: <span id="location"></span></p>
+                <p>Temperature: <span id="temperature"></span></p>
+                <p>Feels : <span id="condition"></span></p>
+            </div>
+            <div id="forecast" class="forecast-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Weather Website</p>
+    </footer>
+    <script src="weather_new.js"></script>
+</body>
+</html>
